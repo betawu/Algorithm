@@ -35,12 +35,12 @@ public class FixedCapacityStack<T> {
 	}
 
 	public T pop() {
-		if(n>0&&n==arr.length/4) {
-			resize(arr.length/2);
-		}
 		T rs = arr[n-1];
 		arr[n-1] = null;
 		n--;
+		if(n>0&&n==arr.length/4) {
+			resize(arr.length/2);
+		}
 		return rs;
 	}
 	
