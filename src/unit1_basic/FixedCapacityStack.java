@@ -77,6 +77,10 @@ public class FixedCapacityStack<T> {
 		return new ReverseArrayIterator<>();
 	}
 	
+	public boolean isFull() {
+		return arr.length==n;
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		FixedCapacityStack<String> stack = new FixedCapacityStack<>(1);
