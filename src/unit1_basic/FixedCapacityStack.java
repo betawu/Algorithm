@@ -1,5 +1,6 @@
 package unit1_basic;
 
+import java.util.Iterator;
 import java.util.Scanner;
 
 /**
@@ -51,6 +52,31 @@ public class FixedCapacityStack<T> {
 		return n;
 	}
 	
+	
+	//自定义迭代器
+	private class ReverseArrayIterator<T> implements Iterator<T>{
+
+		private int i = n;
+		private T[] a =(T[]) arr;
+		
+		@Override
+		public boolean hasNext() {
+			return i>0;
+		}
+
+		@Override
+		public T next() {
+			i--;
+			return a[i];
+		}
+		
+	}
+	
+	//使栈可以使用迭代器遍历
+	public ReverseArrayIterator<T> iterator(){
+		return new ReverseArrayIterator<>();
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		FixedCapacityStack<String> stack = new FixedCapacityStack<>(1);
@@ -61,6 +87,11 @@ public class FixedCapacityStack<T> {
 			}else {
 				stack.push(s);
 			}
+		}
+		
+		FixedCapacityStack<String>.ReverseArrayIterator<String> iterator = stack.iterator();
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
 		}
 	}
 }
