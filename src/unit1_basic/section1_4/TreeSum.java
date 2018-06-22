@@ -24,5 +24,6 @@ public class TreeSum {
 	public static void main(String[] args) {
 		int[] arr = {-1, 0, 1, 2, -1, -4};
 		System.out.println(TreeSum.count(arr));
+		System.out.println(16%8);
 	}
 }
