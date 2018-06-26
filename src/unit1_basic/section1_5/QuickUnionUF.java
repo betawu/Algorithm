@@ -1,5 +1,6 @@
 package unit1_basic.section1_5;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -71,5 +72,7 @@ public class QuickUnionUF implements UF{
 		}	
 		
 		System.out.println(uf.count);
+		
+		System.out.println(Arrays.toString(uf.arr));
 	}
 }
