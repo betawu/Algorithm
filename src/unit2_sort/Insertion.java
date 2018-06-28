@@ -13,6 +13,8 @@ public class Insertion {
 			for(int j=i;j>0;j--) {
 				if(arr[j]<arr[j-1]) {
 					exchange(arr,j,j-1);
+				}else {
+					break;
 				}
 			}
 		}
