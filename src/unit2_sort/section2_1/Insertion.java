@@ -1,4 +1,4 @@
-package unit2_sort;
+package unit2_sort.section2_1;
 
 import java.util.Arrays;
 
