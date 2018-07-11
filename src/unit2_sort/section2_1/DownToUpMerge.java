@@ -45,7 +45,7 @@ public class DownToUpMerge {
 		//从小数组合并到大数组
 		for(int sz =1;sz<len;sz +=sz) {
 			for(int l=0;l<len;l+=sz+sz) {
-				merge(arr, l, l+sz-1, Math.min(l+sz+sz-1, len-1));//mid是右边界索引除以2 不是整个区间长度
+				merge(arr, l, l+sz-1, Math.min(l+sz+sz-1, len-1));//mid是右边界索减去左边界索引引除以2 不是整个区间长度
 			}
 		}
 	}
