@@ -8,8 +8,8 @@ public class SortUtil {
 	
 	public static <T extends Comparable<T>> void exch(T[] arr, int i, int j) {
 		T temp = arr[i];
-		arr[j] = arr[i];
-		arr[i] = temp;
+		arr[i] = arr[j];
+		arr[j] = temp;
 	}
 	
 	public static <T extends Comparable<T>> boolean isSort(T[] arr) {
