@@ -1,7 +1,5 @@
 package unit2_sort.section2_4.base;
 
-import java.lang.reflect.Array;
-
 import unit2_sort.section2_1.SortUtil;
 import unit2_sort.section2_4.MaxPQ;
 
