@@ -6,7 +6,7 @@ public class SortUtil {
 		return v.compareTo(w) < 0;
 	}
 	
-	public static <T extends Comparable<T>> void exch(T[] arr, int i, int j) {
+	public static <T> void exch(T[] arr, int i, int j) {
 		T temp = arr[i];
 		arr[i] = arr[j];
 		arr[j] = temp;
