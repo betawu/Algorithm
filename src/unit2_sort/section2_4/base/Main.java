@@ -1,6 +1,7 @@
 package unit2_sort.section2_4.base;
 
 import unit2_sort.section2_4.MaxPQ;
+import unit2_sort.section2_4.heap.HeapPQ;
 
 public class Main {
 	public static void main(String[] args) {
@@ -9,7 +10,8 @@ public class Main {
 		};
 //		ArrayOutOfOrderPQ<Integer> pq = new ArrayOutOfOrderPQ<>(arr);
 //		MaxPQ<Integer> pq = new ArrayInOrderPQ<>(arr);
-		MaxPQ<Integer> pq = new LinkedListPQ<>(arr);
+//		MaxPQ<Integer> pq = new LinkedListPQ<>(arr);
+		MaxPQ<Integer> pq = new HeapPQ<>(arr);
 		while (!pq.isEmpty()) {
 			System.out.print(pq.delMax()+" ");
 		}
