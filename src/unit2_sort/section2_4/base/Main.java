@@ -8,7 +8,8 @@ public class Main {
 				4,2,36,42,66,1,26,23,1,12,24,56,88,8,9,3,31
 		};
 //		ArrayOutOfOrderPQ<Integer> pq = new ArrayOutOfOrderPQ<>(arr);
-		MaxPQ<Integer> pq = new ArrayInOrderPQ<>(arr);
+//		MaxPQ<Integer> pq = new ArrayInOrderPQ<>(arr);
+		MaxPQ<Integer> pq = new LinkedListPQ<>(arr);
 		while (!pq.isEmpty()) {
 			System.out.print(pq.delMax()+" ");
 		}
