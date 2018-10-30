@@ -20,14 +20,14 @@ public class Quick {
 	
 	private static int partition(char[] arr, int l, int r) {
 		char v = arr[l];
-		int j = l;
+		int j = l;//为比v小的数的最大坐标（也就是小于等于j的都小于等于V）
 		for(int i=l+1 ;i<=r;i++) {
 			if(arr[i]<v) {
 				swap(arr,j+1,i);
 				j++;
 			}
 		}
-		swap(arr,l,j);
+		swap(arr,l,j);//把v换到中间 这样V左边的都比他小 右边的都比他大
 		return j;
 	}
 	
